@@ -42,7 +42,7 @@ func TestFindOddNumber(t *testing.T) {
 		tc := testCases[i]
 		t.Run(tc.name, func(t *testing.T) {
 			result := FindOddNumber(tc.input)
-			require.Equal(t, result, tc.expect)
+			require.Equal(t, tc.expect, result)
 		})
 	}
 }
