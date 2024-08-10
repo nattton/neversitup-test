@@ -14,9 +14,9 @@ func TestSliceText(t *testing.T) {
 	assert.Equal([]string{"a", "b", "c"}, sliceText("abc"))
 }
 
-func TestRemoveDuplicate(t *testing.T) {
+func TestRemoveDuplicates(t *testing.T) {
 	assert := assert.New(t)
-	results := removeDuplicate([]string{"a", "a", "a", "ab", "ab", "aab", "aab", "aaab", "aaab"})
+	results := removeDuplicates([]string{"a", "a", "a", "ab", "ab", "aab", "aab", "aaab", "aaab"})
 	expect := []string{"a", "ab", "aab", "aaab"}
 	assert.Len(results, len(expect))
 	assert.ElementsMatch(results, expect)

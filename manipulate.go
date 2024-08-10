@@ -9,7 +9,7 @@ import (
 func permutations(str []string) []string {
 	var results []string
 	shuffle(str, 0, &results)
-	results = removeDuplicate(results)
+	results = removeDuplicates(results)
 	return results
 }
 
@@ -26,7 +26,7 @@ func shuffle(str []string, index int, results *[]string) {
 	}
 }
 
-func removeDuplicate(str []string) []string {
+func removeDuplicates(str []string) []string {
 	sort.Strings(str)
 	size := len(str)
 	j := 1
